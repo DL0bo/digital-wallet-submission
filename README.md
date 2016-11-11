@@ -20,7 +20,7 @@ For example, User A has never had a transaction with User B, but both User A and
 
 For this reason, User A and User B should be able to pay each other without triggering a warning notification since they're "2nd degree" friends. 
 
-<img src="./images/friend-of-a-friend1.png" width="500">
+<img src="./digital-wallet-master/images/friend-of-a-friend1.png" width="500">
 
 To account for this, PayMo would like you to also implement this feature. When users make a payment, they'll be notified when the other user is outside of their "2nd-degree network".
 
@@ -30,7 +30,7 @@ To account for this, PayMo would like you to also implement this feature. When u
 ###Feature 3
 More generally, PayMo would like to extend this feature to larger social networks. Implement a feature to warn users only when they're outside the "4th degree friends network".
 
-<img src="./images/fourth-degree-friends2.png" width="600">
+<img src="./digital-wallet-master/images/fourth-degree-friends2.png" width="600">
 
 In the above diagram, payments have transpired between User
 
