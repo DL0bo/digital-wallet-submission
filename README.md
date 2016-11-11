@@ -60,7 +60,7 @@ The solution to the problem encountered was to do a 2 sided "breadth first searc
 
 ##Instructions
 
-Run each Feature# script stored in src folder to output the results onto the paymo_output folder. Outputs will be named output1.txt, output2.txt, and output3.txt for scripts feature1.py, feature2.py, and feature3.py respectively. The InitNetwork.py does not need to be ran again as this script is ran once to create a adjacency matrix from the batch_payment.csv.
+Run each Feature# script stored in src folder to output the results onto the paymo_output folder. Outputs will be named output1.txt, output2.txt, and output3.txt for scripts feature1.py, feature2.py, and feature3.py respectively. The InitNetwork.py does not need to be ran again as this script is ran once to create an adjacency matrix from the batch_payment.csv.
 
 Note the amount of lines it processes through is only 500 transactions. You can change it by going into the script for each Feature and changing the if statement on line 63 (in the case of Feature3.py) to the desired row number.
 
