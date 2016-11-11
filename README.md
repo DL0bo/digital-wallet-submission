@@ -2,6 +2,7 @@
 
 1. [Challenge Summary] (README.md#challenge-summary)
 2. [Details of Implementation] (README.md#details-of-implementation)
+3. [Instructions] (README.md#instructions)
 
 
 ##Challenge Summary
@@ -54,4 +55,12 @@ There are two inputs given; both are stored under the /paymo_input folder. One i
 
 Once the matrix/network was created. A search algorithm called breadth first search was used to search through the matrix as each line in "stream_payment.csv" is processed (the proscessing is done via script checkpickles.py) This algorithm however was not sufficient to process the lines as some users have incredibly wide networks spanning wide which caused a problem for the breadth first algorithm. Therefore running the breadth first search to completley exhaust 4 degrees (as 4 degrees was the objective of feature 3) in the adjacency matrix would take an extremley long time. If the average number of "friends" each user had was N, the total searches would be an average maximum of N^4 searches. 
 
-The solution to the problem encountered was to do a 2 sided breadth first search algorithm. One starting from the starting user, and the other starting from the end user. The average maximum time would be at most 2(N^2). If 2 degrees from both starting and ending users have been seached entirely, and no common user exists between the two user's visited nodes then the degree of seperation is more than 4 degrees, or no connection between the two users exist. 
+The solution to the problem encountered was to do a 2 sided "breadth first search" algorithm. One starting from the starting user, and the other starting from the end user. The average maximum time would be at most 2(N^2). If 2 degrees from both starting and ending users have been seached entirely, and no common user exists between the two user's visited nodes then the degree of seperation is more than 4 degrees, or there is no connection between the two users. In that case bothe scenarios collapse to the user getting the unverified person warning. This two way breadth first search, implemented in feature2.py and feature3.py produced a much quicker result for each transaction.
+
+
+##Instructions
+
+Run each Feature# script stored in src folder to output the results onto the paymo_output folder. Outputs will be named output1.txt, output2.txt, and output3.txt for scripts feature1.py, feature2.py, and feature3.py respectively. The InitNetwork.py does not need to be ran again as this script is ran once to create a adjacency matrix from the batch_payment.csv.
+
+Note the amount of lines it processes through is only 500 transactions. You can change it by going into the script for each Feature and changing the if statement on line 63 (in the case of Feature3.py) to the desired row number.
+
